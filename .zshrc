@@ -1,6 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+export PATH=usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+
+# Set PATH for PostgreSQL 14 binaries and data directory
+export PATH=$PATH:/opt/homebrew/opt/postgresql@14/bin/postgres:/opt/homebrew/var/postgresql@14
+
+# the homebrew path is added before the $PATH i.e it will be searched before any of the paths
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# path to the nand2tetris project simulators & tools 
+export PATH=$PATH:~/Developer/personal/nand2tetris/tools
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -99,6 +111,8 @@ plugins=(git)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias usaco="~/scripts/usaco.sh"
+alias cf="~/scripts/cf.sh"
 
 # Find and set branch name var if in git repository.
 autoload -U colors && colors
@@ -114,4 +128,6 @@ setopt prompt_subst
 
 # Config for prompt. PS1 synonym.
 prompt='shubhams@macos $(git_branch)${$(git_branch):+ }'
+
+
 

@@ -50,7 +50,6 @@ let g:user_emmet_mode='n' "only active in normal mode
 nnoremap ,f :EmmetFormat<CR>
 " }}}
 
-
 " VIMSCRIPT -------------------------------------------------------------- {{{
 " auto group for folding using marker method
 setlocal foldmethod=marker
